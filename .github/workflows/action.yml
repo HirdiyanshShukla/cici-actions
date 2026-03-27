@@ -28,3 +28,13 @@ jobs:
 
     - name: Run tests
       run: npm test
+
+    - run: echo "build done"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - run: echo "deploying"
+    - run: echo "deployment done"
