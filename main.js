@@ -21,7 +21,7 @@ const validateNumbers = (req, res, next) => {
 };
 
 app.get('/add', validateNumbers, (req, res) => {
-  const result = req.numbers.a + req.numbers.b;
+  const result = req.numbers.a - req.numbers.b;
   res.json({ result });
 });
 
